@@ -3,7 +3,7 @@ from django.db import models
 from model_utils.models import SoftDeletableModel
 from django.utils.translation import ugettext_lazy as _
 
-class CustomUser(SoftDeletableModel, AbstractUser):
+class CustomUser(AbstractUser):
     """
     Custom user model for all users.
     """
