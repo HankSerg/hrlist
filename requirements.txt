@@ -1,0 +1,4 @@
+Django==3.2.7
+psycopg2_binary==2.9.1
+django_mptt==0.13.3
+django-model-utils==4.1.1
