@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load mptt_tags %}
+
+{% block content%}
+<h1>Отделы и сотрудники</h1>
+<p class="fs-5 col-md-8"></p>
+
+<ul class="root">
+  {% recursetree divisions %}
+  <li>
+    <b>{{ node.name }}</b>
+    {% if not node.is_leaf_node %}
+      <ul class="children">
+        {{ children }}
+      </ul>
+    {% endif %}
+  </li>
+  {% endrecursetree %}
+</ul>
+
+
+{% endblock content%}
